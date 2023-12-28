@@ -19,7 +19,7 @@ OBJS			= ${SRC:.c=.o}
 
 all: ${NAME}
 ${NAME}: ${MLX} ${OBJS}
-	${CC} -o ${NAME} ${OBJS} ${MLX} -lglfw
+	${CC} -o ${NAME} ${OBJS} ${MLX} -L/opt/homebrew/lib -lglfw -framework Cocoa -framework OpenGL -framework IOKit
 
 ${MLX}:
 	${MAKE} -C ${MLX_PATH}

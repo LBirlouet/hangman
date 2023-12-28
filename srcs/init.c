@@ -3,6 +3,7 @@
 void	init(t_hangman *t_hangman)
 {
 	srand((unsigned int)time(NULL));
+
 	char *biblio[] = {
 		"pomme",
 		"route",
@@ -84,9 +85,9 @@ void	init(t_hangman *t_hangman)
 	t_hangman->word = malloc(sizeof(char) * (t_hangman->word_size + 1));
 	t_hangman->word = strcpy(t_hangman->word, biblio[index]);
 	t_hangman->word[t_hangman->word_size] = '\0';
-	t_hangman->copy_word = malloc(sizeof(char) * (t_hangman->word_size + 1));
-	t_hangman->word = strcpy(t_hangman->word, t_hangman->word);
-	t_hangman->word[t_hangman->word_size] = '\0';
+	// t_hangman->copy_word = malloc(sizeof(char) * (t_hangman->word_size + 1));
+	// t_hangman->word = strcpy(t_hangman->word, t_hangman->word);
+	// t_hangman->word[t_hangman->word_size] = '\0';
 	int i = 0;
 	t_hangman->letter_pos = malloc(sizeof(int) * 10);
 	while (i < 10)
@@ -94,7 +95,7 @@ void	init(t_hangman *t_hangman)
 		t_hangman->letter_pos[i] = 0;
 		i++;
 	}
-	t_hangman->verif_loose == 0;
+	t_hangman->verif_loose = 0;
 
 /*----------------------------------------FOND--------------------------------------------------------------------------------------------------------*/	
 /**/	t_hangman->img.texture_fond_hangman = mlx_load_png("img/fond.png");																			/**/

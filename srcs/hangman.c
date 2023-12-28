@@ -29,7 +29,7 @@ void	key_press(mlx_key_data_t keydata ,t_hangman *t_hangman)
 		mlx_close_window(t_hangman->mlx);
 	if (t_hangman->verif_loose < 7)
 	{
-		if (keydata.key == MLX_KEY_Q && keydata.action == MLX_RELEASE) // A
+		if (keydata.key == MLX_KEY_A && keydata.action == MLX_RELEASE) 
 		{
 			rod_letter(t_hangman, 'a');
 			letter_in_word = verif_letter(t_hangman, 'a');
@@ -257,7 +257,7 @@ void	key_press(mlx_key_data_t keydata ,t_hangman *t_hangman)
 				t_hangman->verif_loose +=1;
 			}
 		}
-		else if (keydata.key == 59 && keydata.action == MLX_RELEASE) //M
+		else if (keydata.key == MLX_KEY_M && keydata.action == MLX_RELEASE) //M
 		{
 			rod_letter(t_hangman, 'm');
 			letter_in_word = verif_letter(t_hangman, 'm');
@@ -333,7 +333,7 @@ void	key_press(mlx_key_data_t keydata ,t_hangman *t_hangman)
 				t_hangman->verif_loose +=1;
 			}
 		}
-		else if (keydata.key == 65 && keydata.action == MLX_RELEASE) // Q
+		else if (keydata.key == MLX_KEY_Q && keydata.action == MLX_RELEASE) // Q
 		{
 			rod_letter(t_hangman, 'q');
 			letter_in_word = verif_letter(t_hangman, 'q');
@@ -447,7 +447,7 @@ void	key_press(mlx_key_data_t keydata ,t_hangman *t_hangman)
 				t_hangman->verif_loose +=1;
 			}
 		}
-		else if (keydata.key == 90 && keydata.action == MLX_RELEASE) // W
+		else if (keydata.key == MLX_KEY_W && keydata.action == MLX_RELEASE) // W
 		{
 			rod_letter(t_hangman, 'w');
 			letter_in_word = verif_letter(t_hangman, 'w');
@@ -504,7 +504,7 @@ void	key_press(mlx_key_data_t keydata ,t_hangman *t_hangman)
 				t_hangman->verif_loose +=1;
 			}
 		}
-		else if (keydata.key == 87 && keydata.action == MLX_RELEASE) // Z
+		else if (keydata.key == MLX_KEY_Z && keydata.action == MLX_RELEASE) // Z
 		{
 			rod_letter(t_hangman, 'z');
 			letter_in_word = verif_letter(t_hangman, 'z');
